@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go!"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/startButton"
+        android:textSize="80dp"
+        android:padding="20dp"
+        android:background="#d4ff00"
+        android:onClick="start"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:id="@+id/gameRelativeLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30s"
+            android:id="@+id/timerTextView"
+            android:textSize="30sp"
+            android:padding="15sp"
+            android:autoText="false"
+            android:background="#ffea2d"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/0"
+            android:id="@+id/pointsTextView"
+            android:background="#f60d0d"
+            android:padding="15sp"
+            android:textSize="30sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30+ 12"
+            android:id="@+id/sumTextView"
+            android:textSize="40sp"
+            android:padding="15sp"
+            android:textColor="#060606"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/timerTextView"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentStart="false"
+            android:layout_marginTop="40dp"
+            android:id="@+id/gridLayout">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:id="@+id/button0"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:gravity="fill"
+                android:tag="0"
+                android:textAlignment="center"
+                android:textSize="80sp"
+                android:background="#012bf9"
+                android:onClick="chooseAnswer" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:id="@+id/button2"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:gravity="fill"
+                android:tag="2"
+                android:textAlignment="center"
+                android:textSize="80sp"
+                android:background="#01f933"
+                android:onClick="chooseAnswer"
+                android:layout_below="@+id/gridLayout"
+                android:layout_alignLeft="@+id/sumTextView"
+                android:layout_alignStart="@+id/sumTextView" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:id="@+id/button1"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:gravity="fill"
+                android:tag="1"
+                android:textAlignment="center"
+                android:textSize="80sp"
+                android:background="#f901dc"
+                android:onClick="chooseAnswer" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:id="@+id/button3"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:gravity="fill"
+                android:tag="3"
+                android:textAlignment="center"
+                android:textSize="80sp"
+                android:background="#01f9e8"
+                android:onClick="chooseAnswer" />
+        </GridLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resultTextView"
+            android:layout_below="@+id/gridLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="47dp"
+            android:textSize="30dp"
+            android:textIsSelectable="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PlayAgain"
+            android:id="@+id/playAgainButton"
+            android:layout_below="@+id/resultTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:onClick="playAgain"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+</RelativeLayout>
